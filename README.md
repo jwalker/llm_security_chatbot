@@ -1,6 +1,6 @@
 # LLM Security Chatbot
 
-The LLM Security Chatbot is a cutting-edge tool designed to assist in understanding and researching cybersecurity vulnerabilities. Built with the powerful Llama Large Language Model (LLM) and integrated into a user-friendly interface using Streamlit, this chatbot leverages natural language processing to provide in-depth analysis, actionable insights, and potential mitigation strategies for a wide range of security concerns.
+The LLM Security Chatbot is designed to assist in understanding and researching cybersecurity research. Mostly a POC. Built using Mistral 7B v1 and integrated into a user-friendly interface using Streamlit, this chatbot leverages natural language processing to provide in-depth analysis and potential mitigation strategies for a wide range of security concerns.
 
 ## Features
 
