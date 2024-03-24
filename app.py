@@ -1,9 +1,10 @@
 import streamlit as st
 from llama_cpp import Llama
+import json
 
 # Initialize the Llama model
 llm = Llama(
-    model_path="../llama.cpp/models/mistral-7B-v0.1/ggml-model-Q4_K_M.gguf",
+    model_path="../llama.cpp/models/mixtral-8x7B/ggml-model-Q4_K_M.gguf",
     n_ctx=4096,
     n_gpu_layers=-1,
     chat_format="chatml"
@@ -58,6 +59,7 @@ def export_conversation_history():
             file.write(line)
     st.success('Conversation exported successfully!')
 
+
 if st.button('Submit'):
     if user_query:
         st.session_state['conversation_history'].append({"sender": "Researcher", "message": user_query})
@@ -107,6 +109,13 @@ with st.sidebar:
             display_debug_info()
     with col2:
         st.markdown("**Show Debug Information**")
+
+    st.markdown("---")  # Horizontal line for visual separation
+    st.markdown("## 🛠 Integration Controls")
+    
+    # Slack Integration Button
+    if st.button("Slack"):
+        # stub
     
     st.markdown("""---""")  # Horizontal line for visual separation
     
