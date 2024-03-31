@@ -1,2 +1,4 @@
 venv/*
 conversation*
+.DS_Store
+payload.json

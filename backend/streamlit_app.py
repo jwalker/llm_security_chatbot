@@ -117,17 +117,17 @@ with st.sidebar:
     if st.button("Slack"):
         # stub
     
-    st.markdown("""---""")  # Horizontal line for visual separation
-    
-    # Link to Blog Post
-    st.markdown('📖 [Blog post on setup and how the app was built](https://blog.stellersjay.pub)')
+        st.markdown("""---""")  # Horizontal line for visual separation
+        
+        # Link to Blog Post
+        st.markdown('📖 [Blog post on setup and how the app was built](https://blog.stellersjay.pub)')
 
-    st.markdown("---")  # Horizontal line for visual separation
-    st.markdown("## 📬 Contact & Source Code")
-    
-    # GitHub Repo Link
-    st.markdown("Check out the [GitHub repository](https://github.com/jwalker/your-repo-name) for this project.")
-    
-    # Email Contact
-    st.markdown("Feel free to reach out via email: [jwalker](mailto:jay@stellersjay.pub)")
+        st.markdown("---")  # Horizontal line for visual separation
+        st.markdown("## 📬 Contact & Source Code")
+        
+        # GitHub Repo Link
+        st.markdown("Check out the [GitHub repository](https://github.com/jwalker/your-repo-name) for this project.")
+        
+        # Email Contact
+        st.markdown("Feel free to reach out via email: [jwalker](mailto:jay@stellersjay.pub)")
 
