@@ -18,7 +18,7 @@ def process_with_llama_cpp(query):
 
     # Command to execute the llama.cpp main executable with the formatted query
     command = [
-        '../../llama.cpp/main',  # Adjust the path to the executable as needed
+        '../../llama.cpp/llama-cli',  # Adjust the path to the executable as needed
         '-m', '../../llama.cpp/models/Meta-Llama-3-8B-Instruct/ggml-model-Q4_K_M.gguf',
         '-p', formatted_query,
         '-n', '400',
