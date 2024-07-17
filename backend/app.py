@@ -52,13 +52,13 @@ def submit_query():
                 history = []
             history.append({"query": query, "response": response})
             file.seek(0)
-            json.dump(history, file)
+            json.dump(history, file, indent=4)  # Pretty print the JSON
             file.truncate()  # Truncate the file to the new content size
     except FileNotFoundError:
         with open('conversation_history.json', 'w') as file:
-            json.dump([{"query": query, "response": response}], file)
+            json.dump([{"query": query, "response": response}], file, indent=4)  # Pretty print the JSON
 
-    return jsonify({"response": response})
+    return jsonify({"response": response}), 200, {'Content-Type': 'application/json; charset=utf-8'}
 
 @app.route('/get_history', methods=['GET'])
 def get_history():
@@ -68,7 +68,7 @@ def get_history():
     except FileNotFoundError:
         history = []
 
-    return jsonify(history)
+    return jsonify(history), 200, {'Content-Type': 'application/json; charset=utf-8'}
 
 if __name__ == '__main__':
     app.run(debug=True)
